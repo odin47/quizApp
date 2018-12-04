@@ -1,0 +1,27 @@
+  <div class="quizTitle">
+      Javascript quiz {{count+1}} of {{numberOfQuestions}}
+    </div>
+  <form>
+  <div *ngFor = "let questions of questionsAndAnswersArray; let i = index; let j = last" class="quizQuestions" >
+    <div *ngIf="i===count">
+      {{questions.text}}<br><br>
+    A - {{questions.options[0]}}<br>
+    B - {{questions.options[1]}}<br>
+    C - {{questions.options[2]}}<br>
+    D - {{questions.options[3]}}<br>
+    <div class="quizOptions">
+        <input class="quizRadioOptions" id=A{{i}} type="radio" name="cases{{i}}"  [value]="1" [(ngModel)]="questions.userAnswer" /><label class="radio-inline" for=A{{i}}>A</label>
+        <input class="quizRadioOptions" id=B{{i}} type="radio" name="cases{{i}}"  [value]="2" [(ngModel)]="questions.userAnswer" /><label class="radio-inline" for=B{{i}}>B</label>
+        <input class="quizRadioOptions" id=C{{i}} type="radio" name="cases{{i}}"  [value]="3" [(ngModel)]="questions.userAnswer" /> <label class="radio-inline" for=C{{i}}>C</label>
+        <input class="quizRadioOptions" id=D{{i}} type="radio" name="cases{{i}}"  [value]="4" [(ngModel)]="questions.userAnswer" /> <label class="radio-inline" for=D{{i}}>D</label>
+        </div>
+        </div>
+  </div>
+  <button class="buttonSubmit" type="submit"  (click)="submitQuiz()" *ngIf="count+1===numberOfQuestions" [routerLink]="['/result']">Submit</button>
+  </form>
+  <div (click)='prevNextQuestion("prev")' *ngIf='prevFlag' class="navigationClassPrev">
+    <a style="margin-right: 150px">&#8592; PREV</a>
+  </div>
+  <div (click)='prevNextQuestion("next")' *ngIf='nextFlag' class="navigationClassNext">
+  <a>NEXT &#8594;</a>
+    </div>

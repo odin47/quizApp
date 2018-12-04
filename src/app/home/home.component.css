@@ -1,0 +1,79 @@
+.quizTitle {
+    margin-left: 180px;
+    margin-top: 50px;
+    font-size: -webkit-xxx-large;
+    color: white;
+    font-family: cursive;
+}
+
+.quizQuestions {
+    margin-left: 180px;
+    margin-top: 50px;
+    font-size: -webkit-xxx-large;
+    color: white;
+    font-family: cursive;
+}
+
+.quizOptions {
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    color: white;
+    font-family: cursive;
+    margin-top: 170px;
+}
+
+.radio-inline {
+    padding: 20px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.radio-inline input[type='radio']{
+    display: none;
+}
+.quizRadioOptions {
+    display: contents;
+}
+
+.radio-inline input[type=radio]:checked + label {
+    padding: 20px;
+    border-style: solid;
+    cursor: pointer;
+    background: lightgray;
+}
+
+input[type=radio]:checked + label {
+    background: gray;
+    font-weight: bold;
+}
+.navigationClassNext {
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    color: white;
+    font-family: cursive;
+    float: right;
+    margin-right: 150px;
+    cursor: pointer;
+}
+.navigationClassPrev {
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    color: white;
+    font-family: cursive;
+    float: left;
+    margin-left: 150px;
+    cursor: pointer;
+}
+.buttonSubmit {
+    background-color: rgb(202, 243, 204); /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: right;
+    margin-right: 80px;
+    cursor: pointer;
+}

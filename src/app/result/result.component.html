@@ -1,0 +1,13 @@
+<h1 style="text-align:center">Report</h1>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Correct Answer</th>
+    <th>User Answer</th>
+  </tr>
+  <tr *ngFor = "let result of finalResult">
+    <td>{{result.text}}</td>
+    <td>{{result.answer}}</td>
+    <td>{{result.userAnswer}}</td>
+    </tr>
+</table>
